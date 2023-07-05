@@ -1,0 +1,184 @@
+<html>
+<body>
+    <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Prediction</title>
+    <div style="background-image: url(https://thumbs.dreamstime.com/z/web-money-growth-pie-chart-cartoon-vector-illustration-design-finance-graph-arrow-trend-income-concept-white-background-176361375.jpg);">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/styles.css">
+    
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Income Prediction BY Shahin Anjum</a>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+
+    <div class="container">
+
+    <h1>Predict If Cancer is benign or Malignant</h1>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="radius_mean">radius_mean:</label>
+        <input type="text" id="radius_mean" name="radius_mean" placeholder="Enter radius_mean value (float)">
+    </div>
+
+    <br/>
+
+    <div class="form-group">
+        <label for="texture_mean">texture_mean:</label>
+        <input type="text" id="texture_mean" name="texture_mean" placeholder="Enter texture_mean value (float)">
+    </div>
+
+    <br/>
+
+    <div class="form-group">  
+        <label for="smoothness_mean">smoothness_mean:</label>
+        <input type="text" id="smoothness_mean" name="smoothness_mean" placeholder="Enter smoothness_mean value (float)">
+    </div>
+
+    <br/>
+    
+    <div class="form-group">
+        <label for="compactness_mean">compactness_mean:</label>
+        <input type="text" id="compactness_mean" name="compactness_mean" placeholder="Enter compactness_mean value (float)">
+    </div>  
+
+    <br/>
+    
+    <div class="form-group">
+        <label for="concavity_mean">concavity_mean:</label>
+        <input type="text" id="concavity_mean" name="concavity_mean" placeholder="Enter concavity_mean value (float)">
+    </div>  
+
+    <br/>
+    
+    <div class="form-group">
+        <label for="symmetry_mean">symmetry_mean:</label>
+        <input type="text" id="symmetry_mean" name="symmetry_mean" placeholder="Enter symmetry_mean value (float)">
+    </div>  
+
+    <br/>
+    
+    <div class="form-group">
+        <label for="fractal_dimension_mean">fractal_dimension_mean:</label>
+        <input type="text" id="fractal_dimension_mean" name="fractal_dimension_mean" placeholder="Enter fractal_dimension_mean value (float)">
+    </div>  
+
+    <br/>
+  
+    <div class="form-group">
+        <label for="radius_se">radius_se:</label>
+        <input type="text" id="radius_se" name="radius_se" placeholder="Enter radius_se value (float)">
+    </div>         
+
+    <br/>
+
+    <div class="form-group">
+        <label for="texture_se">texture_se:</label>
+        <input type="text" id="texture_se" name="texture_se" placeholder="Enter texture_se value (float)">
+    </div>  
+
+    <br/>
+    
+    <div class="form-group">
+        <label for="smoothness_se">smoothness_se:</label>
+        <input type="text" id="smoothness_se" name="smoothness_se" placeholder="Enter smoothness_se value (float)">
+    </div>  
+
+    <br/>
+    
+    <div class="form-group">
+        <label for="compactness_se">compactness_se:</label>
+        <input type="text" id="compactness_se" name="compactness_se" placeholder="Enter compactness_se value (float)">
+    </div>  
+
+    <br/>
+    
+    <div class="form-group">
+        <label for="concavity_se">concavity_se:</label>
+        <input type="text" id="concavity_se" name="concavity_se" placeholder="Enter concavity_se value (float)">
+    </div>  
+
+    <br/>
+  
+    <div class="form-group">
+        <label for="concave_points_se">concave_points_se:</label>
+        <input type="text" id="concave_points_se" name="concave_points_se" placeholder="Enter concave_points_se value (float)">
+    </div>         
+
+    <br/>
+
+    <div class="form-group">
+        <label for="symmetry_se">symmetry_se:</label>
+        <input type="text" id="symmetry_se" name="symmetry_se" placeholder="Enter symmetry_se value (float)">
+    </div>  
+
+    <br/>
+    
+    <div class="form-group">
+        <label for="fractal_dimension_se">fractal_dimension_se:</label>
+        <input type="text" id="fractal_dimension_se" name="fractal_dimension_se" placeholder="Enter fractal_dimension_se value (float)">
+    </div>  
+
+    <br/>
+    
+    <div class="form-group">
+        <label for="smoothness_worst">smoothness_worst:</label>
+        <input type="text" id="smoothness_worst" name="smoothness_worst" placeholder="Enter smoothness_worst value (float)">
+    </div>  
+
+    <br/>
+    
+    <div class="form-group">
+        <label for="compactness_worst">compactness_worst:</label>
+        <input type="text" id="compactness_worst" name="compactness_worst" placeholder="Enter compactness_worst value (float)">
+    </div>  
+
+    <br/>
+  
+    <div class="form-group">
+        <label for="concavity_worst">concavity_worst:</label>
+        <input type="text" id="concavity_worst" name="concavity_worst" placeholder="Enter concavity_worst value (float)">
+    </div>         
+
+    <br/>
+
+    <div class="form-group">
+        <label for="symmetry_worst">symmetry_worst:</label>
+        <input type="text" id="symmetry_worst" name="symmetry_worst" placeholder="Enter symmetry_worst value (float)">
+    </div>  
+
+    <br/>
+    
+    <div class="form-group">
+        <label for="fractal_dimension_worst">fractal_dimension_worst:</label>
+        <input type="text" id="fractal_dimension_worst" name="fractal_dimension_worst" placeholder="Enter fractal_dimension_worst value (float)">
+    </div>  
+    
+   
+
+<div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</center>
+</body>
+</html>

@@ -3,7 +3,8 @@ import numpy as np
 import pandas as pd
 ## Model Training
 
-from sklearn.linear_model import LinearRegression,Ridge,ElasticNet
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import r2_score,mean_absolute_error,mean_squared_error, classification_report, confusion_matrix
 from sklearn.svm import SVR
 from sklearn.tree import DecisionTreeRegressor
@@ -38,9 +39,10 @@ class ModelTrainer:
             )
           
             models={
-            'LinearRegression':LinearRegression(),
-            'Ridge':Ridge(),
-            'Elasticnet':ElasticNet(),
+            "Random Forest":RandomForestClassifier(),
+            "Decision Tree":DecisionTreeClassifier(),
+            "Logistic":LogisticRegression(),
+            'Random_forest_regressor':RandomForestRegressor(),
             'Decesion_tree_regressor':DecisionTreeRegressor(),
             'DecisionTreeClassifier':DecisionTreeClassifier()
             }
